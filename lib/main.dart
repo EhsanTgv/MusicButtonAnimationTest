@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'blob.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -27,6 +29,19 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Music Button Animation"),
+      ),
+      body: Scaffold(
+        body: Center(
+          child: SizedBox(
+            height: 200,
+            width: 200,
+            child: Blob(
+              color: Color(0xff0092ff), // color blue
+              scale: 1,
+              rotation: 0,
+            ),
+          ),
+        ),
       ),
     );
   }
