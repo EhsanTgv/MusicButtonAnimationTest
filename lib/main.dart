@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'blob.dart';
+import 'play_button_basic.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,9 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Music Button Animation',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark()
+          .copyWith(scaffoldBackgroundColor: Color.fromARGB(255, 18, 32, 47)),
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -35,10 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
           child: SizedBox(
             height: 200,
             width: 200,
-            child: Blob(
-              color: Color(0xff0092ff), // color blue
-              scale: 1,
-              rotation: 0,
+            child: PlayButton(
+              pauseIcon: Icon(Icons.pause, color: Colors.black, size: 90),
+              playIcon: Icon(Icons.play_arrow, color: Colors.black, size: 90),
+              onPressed: () {},
             ),
           ),
         ),
